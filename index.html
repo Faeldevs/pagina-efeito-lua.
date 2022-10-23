@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fael Dev - Efeito Lua</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo" id="Logo do FaelDev">Fael <span>Dev</span></a>
+        <ul>
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#">Projeto</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png"  id="stars">
+        <img src="moon.png" id="moon">
+        <h2 id="texto">Efeito do luar</h2>
+        <a href="#texto-sobre" class="botao">Explore</a>
+        <img src="mountains_behind.png"  id="mountains_behind">
+        <img src="mountains_front.png"  id="mountains_front">
+    </section>
+        <div class="texto-sobre" id="texto-sobre">
+            <h2>Sobre</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita impedit minus corporis, voluptates, beatae quisquam natus iusto dicta maxime quae id pariatur adipisci dolores doloribus quos eius? Quas, reprehenderit temporibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dicta, ullam ab ipsum nostrum accusamus molestiae adipisci, minima sapiente inventore harum! Ullam molestiae incidunt eum illum quis ipsum aliquam accusamus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quasi a quam ad dolor, qui eveniet odio veniam tenetur consequuntur sed culpa impedit quibusdam quisquam unde, officiis laboriosam cum molestiae. <br><br> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita impedit minus corporis, voluptates, beatae quisquam natus iusto dicta maxime quae id pariatur adipisci dolores doloribus quos eius? Quas, reprehenderit temporibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi dicta, ullam ab ipsum nostrum accusamus molestiae adipisci, minima sapiente inventore harum! Ullam molestiae incidunt eum illum quis ipsum aliquam accusamus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quasi a quam ad dolor, qui eveniet odio veniam tenetur consequuntur sed culpa impedit quibusdam quisquam unde, officiis laboriosam cum molestiae. <br><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, sapiente reprehenderit dolore neque quia voluptates a aliquam aspernatur dolor possimus doloribus molestiae harum provident eveniet accusamus saepe. Ea, similique expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure cumque illo deleniti, facilis dignissimos omnis eius adipisci culpa doloribus temporibus, molestiae vitae nesciunt beatae provident odit voluptate voluptatem! Voluptate, libero?</p>
+        </div>
+
+        <section class="contato">
+            <div>
+                <h2 class="titulo" id="contato">Contatos</h2>
+                <a href="https://www.instagram.com/fael_dev/?igshid=YmMyMTA2M2Y%3D" class="botao-contato">Instagram</a>
+                <a href="https://github.com/Faeldevs" class="botao-contato">GitHub</a>
+            </div>
+    
+            
+    
+         </section>
+        
+        <footer>&copy; Copyright - Todos direitos reservardos - 2022</footer>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let texto = document.getElementById('texto');
+            let botao = document.getElementById('botao');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';   
+                mountains_behind.style.top = value * 0 + 'px'; 
+                mountains_front.style.top = value * 0.5 + 'px';  
+                text.style.marginRight = value * 4 + 'px';   
+                text.style.marginTop = value * 1.5 + 'px';
+                botao.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+
+</body>
+</html>  
